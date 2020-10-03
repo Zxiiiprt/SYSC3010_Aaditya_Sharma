@@ -42,7 +42,7 @@ def last_initial():
     X, X, X, N, N, X, X, X]
   return image"""
 
-i = 2
+i = 2 #kept as a counter to toggle between when values are even/odd
 
 # Main Loop
 
@@ -55,11 +55,11 @@ while True:
             
             if e.action != 'pressed':
                 continue
-            
+            #Hit the middle jostick button to clear the screen whenever you want
             if e.direction == 'middle':
                 sense.clear()
                     
-            elif e.direction == 'right' or 'down' or 'up' or 'left': #
+            elif e.direction == 'right' or 'down' or 'up' or 'left': 
                 if (i % 2) == 0:
                     sense.show_message("A", text_colour = l, back_colour = bgc) #first_initial()
                     i += 1
